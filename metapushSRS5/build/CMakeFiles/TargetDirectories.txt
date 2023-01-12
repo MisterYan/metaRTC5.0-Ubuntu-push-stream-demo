@@ -1,0 +1,5 @@
+/home/yhx/Documents/metaRTC/metapushSRS5/build/CMakeFiles/edit_cache.dir
+/home/yhx/Documents/metaRTC/metapushSRS5/build/CMakeFiles/rebuild_cache.dir
+/home/yhx/Documents/metaRTC/metapushSRS5/build/CMakeFiles/peerconnection.dir
+/home/yhx/Documents/metaRTC/metapushSRS5/build/CMakeFiles/metartc_zlm.dir
+/home/yhx/Documents/metaRTC/metapushSRS5/build/CMakeFiles/metapushSRS5.dir
