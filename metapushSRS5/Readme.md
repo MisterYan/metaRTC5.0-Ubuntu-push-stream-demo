@@ -17,6 +17,7 @@
 10. sudo apt-get install libsrtp2-dev
 11. sudo apt-get install openssl
 ```
+注意：需要手动解压编译安装的库在 thirdparty/metartc5.thirdparty.src.7z
 
 ## 编译libmetartc5.a：
 进入到libmetartc5目录下，根据系统架构运行对应的编译脚本，X86运行cmake_x64.sh，jetson NX 运行cmake_arm.sh
