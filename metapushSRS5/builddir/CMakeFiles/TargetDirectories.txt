@@ -1,0 +1,6 @@
+/home/yhx/Documents/metaRTC5.0-Ubuntu-push-stream-demo/metapushSRS5/builddir/CMakeFiles/rebuild_cache.dir
+/home/yhx/Documents/metaRTC5.0-Ubuntu-push-stream-demo/metapushSRS5/builddir/CMakeFiles/edit_cache.dir
+/home/yhx/Documents/metaRTC5.0-Ubuntu-push-stream-demo/metapushSRS5/builddir/CMakeFiles/peerconnection_zlm.dir
+/home/yhx/Documents/metaRTC5.0-Ubuntu-push-stream-demo/metapushSRS5/builddir/CMakeFiles/peerconnection_srs.dir
+/home/yhx/Documents/metaRTC5.0-Ubuntu-push-stream-demo/metapushSRS5/builddir/CMakeFiles/metartc_zlm.dir
+/home/yhx/Documents/metaRTC5.0-Ubuntu-push-stream-demo/metapushSRS5/builddir/CMakeFiles/metartc_srs.dir

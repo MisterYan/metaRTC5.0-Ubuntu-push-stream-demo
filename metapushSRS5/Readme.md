@@ -17,7 +17,6 @@
 10. sudo apt-get install libsrtp2-dev
 11. sudo apt-get install openssl
 ```
-注意：需要手动解压编译安装的库在 thirdparty/metartc5.thirdparty.src.7z
 
 ## 编译libmetartc5.a：
 进入到libmetartc5目录下，根据系统架构运行对应的编译脚本，X86运行cmake_x64.sh，jetson NX 运行cmake_arm.sh
@@ -37,6 +36,7 @@
 
 ## 编译推流demo：
 1. 将上面编译的 libmetartc5.a 和 libmetartccore5.a 库复制到metapushSRS5 目录下，即可编译推流demo,流媒体服务器需要自行根据 SRS 和 ZLMediakit 官方教程搭建.
-2. main.cpp 是测试推流本机摄像头到 SRS 的demo
+2. metartc_srs.cpp 是测试推流本机摄像头到 SRS 的demo
 3. metartc_zlm.cpp 是测试推流本机摄像头到 ZLMediakit 并开启 datachannel 通讯的demo
-4. peerconnection.cpp 是测试读取本地视频文件，然后调用作者的API接口推流；但是推流后不能播放，还未调试成功
+4. peerconnection_zlm.cpp 是测试读取本地H264视频文件，然后调用API接口推流ZLMediakit服务器demo
+5. peerconnection_srs.cpp 是测试读取本地H264视频文件，然后调用API接口推流SRS服务器demo；但是推流后SRS webrtc测试页面不能播放，还未调试成功

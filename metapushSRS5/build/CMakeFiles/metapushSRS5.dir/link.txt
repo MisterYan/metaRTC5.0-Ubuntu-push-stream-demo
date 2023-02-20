@@ -1,1 +1,0 @@
-/usr/bin/c++   -O2 -std=gnu++11 -O3 -DNDEBUG  -rdynamic CMakeFiles/metapushSRS5.dir/main.cpp.o  -o metapushSRS5  ../libmetartc5.a ../libmetartccore5.a -lpthread -lssl -lcrypto -lopenh264 -lyuv -ljpeg -lspeexdsp -lopus -lX11 -ldl -lsrtp2 -lmbedtls -lmbedx509 -lmbedcrypto -lusrsctp -lasound 

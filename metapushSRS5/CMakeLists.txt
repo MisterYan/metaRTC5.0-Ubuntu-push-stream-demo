@@ -2,6 +2,8 @@ cmake_minimum_required(VERSION 2.8)
 project(metapushSRS5)
 # add_definitions(-D__STDC_FORMAT_MACROS)
 
+set(EXECUTABLE_OUTPUT_PATH ${PROJECT_BINARY_DIR})
+
 set(CMAKE_BUILD_TYPE "RELEASE")
 
 set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -O2 -std=gnu11")
@@ -29,8 +31,8 @@ include_directories(${FFMPEG_INCLUDE_DIR})
 set(METARTC_LIB ${CMAKE_CURRENT_SOURCE_DIR}/libmetartc5.a)
 set(METARTCCORE_LIB ${CMAKE_CURRENT_SOURCE_DIR}/libmetartccore5.a)
 
-add_executable(${PROJECT_NAME} main.cpp)
-target_link_libraries(${PROJECT_NAME} 
+add_executable(metartc_srs metartc_srs.cpp)
+target_link_libraries(metartc_srs 
                       ${METARTC_LIB}
                       ${METARTCCORE_LIB}
                       -lpthread
@@ -75,8 +77,8 @@ target_link_libraries(metartc_zlm
                       )
 
 
-add_executable(peerconnection peerconnection.cpp)
-target_link_libraries(peerconnection
+add_executable(peerconnection_zlm peerconnection_zlm.cpp)
+target_link_libraries(peerconnection_zlm
                       ${METARTC_LIB}
                       ${METARTCCORE_LIB}
                       -lpthread
@@ -97,3 +99,29 @@ target_link_libraries(peerconnection
                       -lasound
                       ${FFMPEG_LIBRARIES}
                       )
+
+add_executable(peerconnection_srs peerconnection_srs.cpp)
+target_link_libraries(peerconnection_srs
+                    ${METARTC_LIB}
+                    ${METARTCCORE_LIB}
+                    -lpthread
+                    -lssl
+                    -lcrypto
+                    -lopenh264
+                    -lyuv
+                    -ljpeg
+                    -lspeexdsp
+                    -lopus
+                    -lX11
+                    -ldl
+                    -lsrtp2
+                    -lmbedtls
+                    -lmbedx509
+                    -lmbedcrypto
+                    -lusrsctp
+                    -lasound
+                    ${FFMPEG_LIBRARIES}
+                    )
+
+file(COPY ${CMAKE_CURRENT_SOURCE_DIR}/../yang_config.ini DESTINATION ${EXECUTABLE_OUTPUT_PATH})                
+                    
