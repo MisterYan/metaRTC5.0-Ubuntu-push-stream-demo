@@ -1,11 +1,12 @@
-﻿//
+﻿
+//
 // Copyright (c) 2019-2022 yanggaofeng
 //
 #ifndef YANGAPP_YangPushCapture_H_
 #define YANGAPP_YangPushCapture_H_
 #include <yangutil/yangtype.h>
 #include <yangaudiodev/YangAudioCapture.h>
-#include <yangutil/sys/YangThread.h>
+#include <yangutil/sys/YangThread2.h>
 #include <yangcapture/YangMultiVideoCapture.h>
 #include <yangcapture/YangScreenCapture.h>
 #include <yangutil/buffer/YangAudioBuffer.h>

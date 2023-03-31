@@ -1,15 +1,15 @@
-//
+﻿//
 // Copyright (c) 2019-2022 yanggaofeng
 //
 #ifndef INCLUDE_YANGCAPTURE_YANGVIDEOCAPTURE_H_
 #define INCLUDE_YANGCAPTURE_YANGVIDEOCAPTURE_H_
+
+#include <yangutil/buffer/YangVideoBuffer.h>
+#include <yangutil/sys/YangLog.h>
+#include <yangutil/sys/YangThread2.h>
+#include <yangutil/yangavinfotype.h>
 #include <string>
 #include <vector>
-#include <yangutil/sys/YangThread.h>
-#include <yangutil/buffer/YangVideoBuffer.h>
-#include <yangutil/sys/YangIni.h>
-#include <yangutil/sys/YangLog.h>
-
 
 void yang_get_camera_indexs(std::vector<int> *pvs,std::string pcamindex);
 class YangVideoCapture :public YangThread {

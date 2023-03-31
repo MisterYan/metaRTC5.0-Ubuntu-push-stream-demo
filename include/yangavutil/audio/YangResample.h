@@ -5,7 +5,7 @@
 #ifndef YANGAUDIOPROC_YANGRESAMPLE_H_
 #define YANGAUDIOPROC_YANGRESAMPLE_H_
 
-#include <stdint.h>
+#include <yangutil/yangtype.h>
 typedef struct{
 	void* context;
 	void (*init)(void* pcontext,int32_t pchannel,int32_t pinsample,int32_t poutsample);

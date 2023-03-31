@@ -1,0 +1,41 @@
+file(REMOVE_RECURSE
+  "CMakeFiles/metaApp.dir/src/yangp2p/YangP2pFactory.cpp.o"
+  "CMakeFiles/metaApp.dir/src/yangp2p/YangP2pHandleImpl.cpp.o"
+  "CMakeFiles/metaApp.dir/src/yangp2p/YangP2pMessageHandle.cpp.o"
+  "CMakeFiles/metaApp.dir/src/yangp2p/YangP2pRtc.cpp.o"
+  "CMakeFiles/metaApp.dir/src/yangp2p2/YangP2pCapture.cpp.o"
+  "CMakeFiles/metaApp.dir/src/yangp2p2/YangP2pCaputreCamera.cpp.o"
+  "CMakeFiles/metaApp.dir/src/yangp2p2/YangP2pDecoderImpl.cpp.o"
+  "CMakeFiles/metaApp.dir/src/yangp2p2/YangP2pFactoryImpl.cpp.o"
+  "CMakeFiles/metaApp.dir/src/yangp2p2/YangP2pPublishImpl.cpp.o"
+  "CMakeFiles/metaApp.dir/src/yangplayer/YangPlayFactory.cpp.o"
+  "CMakeFiles/metaApp.dir/src/yangplayer/YangPlayerBase.cpp.o"
+  "CMakeFiles/metaApp.dir/src/yangplayer/YangPlayerDecoder.cpp.o"
+  "CMakeFiles/metaApp.dir/src/yangplayer/YangPlayerHandleImpl.cpp.o"
+  "CMakeFiles/metaApp.dir/src/yangplayer/YangPlayerPlay.cpp.o"
+  "CMakeFiles/metaApp.dir/src/yangplayer/YangRtcReceive.cpp.o"
+  "CMakeFiles/metaApp.dir/src/yangpush/YangPushCapture.cpp.o"
+  "CMakeFiles/metaApp.dir/src/yangpush/YangPushEncoder.cpp.o"
+  "CMakeFiles/metaApp.dir/src/yangpush/YangPushFactory.cpp.o"
+  "CMakeFiles/metaApp.dir/src/yangpush/YangPushHandleImpl.cpp.o"
+  "CMakeFiles/metaApp.dir/src/yangpush/YangPushMessageHandle.cpp.o"
+  "CMakeFiles/metaApp.dir/src/yangpush/YangPushPublish.cpp.o"
+  "CMakeFiles/metaApp.dir/src/yangpush/YangRtcPublish.cpp.o"
+  "CMakeFiles/metaApp.dir/src/yangpush/YangSendVideoImpl.cpp.o"
+  "CMakeFiles/metaApp.dir/src/yangrecord/YangFlvWrite.cpp.o"
+  "CMakeFiles/metaApp.dir/src/yangrecord/YangMp4File.cpp.o"
+  "CMakeFiles/metaApp.dir/src/yangrecord/YangMp4FileApp.cpp.o"
+  "CMakeFiles/metaApp.dir/src/yangrecord/YangRecEncoder.cpp.o"
+  "CMakeFiles/metaApp.dir/src/yangrecord/YangRecord.cpp.o"
+  "CMakeFiles/metaApp.dir/src/yangrecord/YangRecordApp.cpp.o"
+  "CMakeFiles/metaApp.dir/src/yangrecord/YangRecordCapture.cpp.o"
+  "CMakeFiles/metaApp.dir/src/yangrecord/YangRecordHandle.cpp.o"
+  "CMakeFiles/metaApp.dir/src/yangrecord/YangRecordMp4.cpp.o"
+  "libmetaApp.a"
+  "libmetaApp.pdb"
+)
+
+# Per-language clean rules from dependency scanning.
+foreach(lang CXX)
+  include(CMakeFiles/metaApp.dir/cmake_clean_${lang}.cmake OPTIONAL)
+endforeach()

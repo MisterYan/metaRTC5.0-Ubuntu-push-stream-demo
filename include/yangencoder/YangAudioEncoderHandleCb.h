@@ -5,16 +5,12 @@
 #ifndef YANGENCODER_INCLUDE_YANGAUDIOENCODERHANDLECB_H_
 #define YANGENCODER_INCLUDE_YANGAUDIOENCODERHANDLECB_H_
 
-#include "stdint.h"
-
+#include <yangutil/sys/YangThread2.h>
+#include <yangutil/buffer/YangAudioEncoderBuffer.h>
+#include <yangutil/buffer/YangAudioPlayBuffer.h>
+#include <yangencoder/YangAudioEncoder.h>
 #include <vector>
 
-#include "yangutil/buffer/YangAudioEncoderBuffer.h"
-#include "yangutil/buffer/YangAudioPlayBuffer.h"
-#include "yangutil/sys/YangIni.h"
-#include "yangutil/sys/YangThread.h"
-
-#include "yangencoder/YangAudioEncoder.h"
 using namespace std;
 class YangAudioEncoderHandleCb:public YangThread
 {

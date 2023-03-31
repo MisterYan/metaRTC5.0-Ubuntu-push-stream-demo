@@ -27,7 +27,7 @@ int32_t yang_parseH264Nalu(YangFrame* videoFrame, YangH264NaluData* pnalu);
 int32_t yang_parseH264Nalu2(YangFrame* videoFrame, YangH264NaluData2* pnalu);
 int32_t yang_getH264SpsppseNalu(YangFrame* videoFrame,uint8_t* pnaludata);
 int32_t yang_getH264KeyframeNalu(YangFrame* videoFrame);
-bool yang_hasH264Pframe(uint8_t* p);
+yangbool yang_hasH264Pframe(uint8_t* p);
 
 int32_t yang_getH265SpsppseNalu(YangFrame* videoFrame,uint8_t* pnaludata);
 int32_t yang_parseH265Nalu(YangFrame* videoFrame,YangH264NaluData* pnalu);

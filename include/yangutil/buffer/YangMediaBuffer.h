@@ -4,7 +4,7 @@
 
 #ifndef YANGUTIL_BUFFER_YANGBUFFER_H_
 #define YANGUTIL_BUFFER_YANGBUFFER_H_
-#include <pthread.h>
+#include <yangutil/sys/YangThread.h>
 #include <yangutil/yangtype.h>
 #include <yangutil/yangavtype.h>
 #define yang_reindex(p)  if(p!=NULL) p->resetIndex();
@@ -36,7 +36,7 @@ protected:
 	int64_t getNextFrameTimestamp();
 	uint8_t* getFrameRef(YangFrame* pframe);
 private:
-	pthread_mutex_t m_lock;
+	yang_thread_mutex_t m_lock;
 };
 
 #endif /* YANGUTIL_BUFFER_YANGBUFFER_H_ */

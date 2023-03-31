@@ -1,14 +1,11 @@
-﻿//
+﻿
+//
 // Copyright (c) 2019-2022 yanggaofeng
 //
 #ifndef SRC_YANGUTIL_SRC_YANGTIMER_H_
 #define SRC_YANGUTIL_SRC_YANGTIMER_H_
-#include <yangutil/sys/YangThread.h>
-#include <stdint.h>
+#include <yangutil/sys/YangThread2.h>
 #include <yangutil/yangtype.h>
-
-
-
 
 #if !Yang_Enable_Timer_Phtread
 #ifdef _WIN32
@@ -51,14 +48,14 @@ protected:
 	void startLoop();
 	void stopLoop();
 private:
-	YangTimerTask *m_task;
+    YangTimerTask *m_task;
     int32_t m_taskId;
 
 
 
 #if Yang_Enable_Timer_Phtread
-        pthread_mutex_t m_lock;
-        pthread_cond_t m_cond_mess;
+    yang_thread_mutex_t m_lock;
+    yang_thread_cond_t m_cond_mess;
 #else
 #ifdef _WIN32
         void startWindowsEventTime(int pwaitTime,DWORD_PTR duser);

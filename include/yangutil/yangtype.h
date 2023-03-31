@@ -7,8 +7,11 @@
 #include <stdlib.h>
 #include <stdint.h>
 #include <yang_config.h>
-#include <yangutil/yang_unistd.h>
-#include "YangErrorCode.h"
+#include <yangutil/yangunistd.h>
+#include <yangutil/yangerrorcode.h>
+#include <yangutil/yangmemory.h>
+
+
 #define Yang_Server_Srs 0
 #define Yang_Server_Zlm 1
 #define Yang_Server_P2p 9
@@ -41,54 +44,21 @@
 #endif
 #define YANG_GET_RECV_BUFFER_INDEX(x) 	 x&YANG_RTC_RECV_BUFFER_COUNT2
 
+#define Yang_AV1_Name "AV1X"
+
+#define YANGALIGN(x, a) (((x)+(a)-1)&~((a)-1))
+#define YANG_INADDR_ANY 0x00000000
+typedef enum{
+	Yang_Socket_Protocol_Udp,
+	Yang_Socket_Protocol_Tcp
+}YangSocketProtocol;
 
 typedef enum {
-	Yang_IpFamilyType_IPV4 =  0x0001,
-	Yang_IpFamilyType_IPV6 =  0x0002,
+	Yang_IpFamilyType_IPV4,
+	Yang_IpFamilyType_IPV6
 } YangIpFamilyType;
 
-typedef struct {
-    uint16_t family;
-    uint16_t port;
-    uint32_t mapAddress;
-    uint8_t  address[16];
-} YangIpAddress;
 
 
-#ifdef __cplusplus
-#define YangAutoFree(className, instance) \
-impl_YangAutoFree<className> _auto_free_##instance(&instance, false)
-#define YangAutoFreeA(className, instance) \
-impl_YangAutoFree<className> _auto_free_array_##instance(&instance, true)
-template<class T>
-class impl_YangAutoFree
-{
-private:
-    T** ptr;
-    bool is_array;
-public:
-    impl_YangAutoFree(T** p, bool array) {
-        ptr = p;
-        is_array = array;
-    }
 
-    virtual ~impl_YangAutoFree() {
-        if (ptr == NULL || *ptr == NULL) {
-            return;
-        }
-
-        if (is_array) {
-            delete[] *ptr;
-        } else {
-            delete *ptr;
-        }
-
-        *ptr = NULL;
-    }
-};
-#else
-#define bool int32_t
-#define true 1
-#define false 0
-#endif
 #endif /* INCLUDE_YANGUTIL_YANGTYPE_H_ */

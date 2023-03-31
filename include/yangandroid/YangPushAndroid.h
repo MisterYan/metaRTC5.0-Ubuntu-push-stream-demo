@@ -9,7 +9,7 @@
 #include <yangpush/YangPushHandle.h>
 class YangPushAndroid:public YangSysMessageI {
 public:
-	YangPushAndroid(YangContext* pcontext,void* pwindow);
+	YangPushAndroid(YangContext* pcontext);
 	virtual ~YangPushAndroid();
 	int32_t startPush(std::string url);
 	int32_t stopPush();

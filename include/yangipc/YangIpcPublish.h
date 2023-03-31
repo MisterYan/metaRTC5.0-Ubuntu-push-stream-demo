@@ -7,7 +7,6 @@
 #include <yangipc/YangIpcEncoder.h>
 #include <yangipc/YangIpcPublish.h>
 #include <yangipc/YangIpcRtc.h>
-#include "yangutil/sys/YangIni.h"
 #include <yangutil/buffer2/YangVideoEncoderBuffer2.h>
 
 

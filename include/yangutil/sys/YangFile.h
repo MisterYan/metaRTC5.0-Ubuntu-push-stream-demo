@@ -3,7 +3,7 @@
 //
 #ifndef INCLUDE_YANGUTIL_SYS_YANGFILE_H_
 #define INCLUDE_YANGUTIL_SYS_YANGFILE_H_
-#include <stdint.h>
+#include <yangutil/yangtype.h>
 #ifdef __cplusplus
 extern "C"{
 #endif

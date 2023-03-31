@@ -1,19 +1,25 @@
 [
 {
   "directory": "/home/yhx/Documents/metaRTC/build",
-  "command": "/bin/g++-9   -I/home/yhx/Documents/metaRTC/metapushSRS5/../include -I/home/yhx/Documents/metaRTC/metapushSRS5/../libmetartc5/src   -O2 -std=gnu++11 -O3 -DNDEBUG   -o CMakeFiles/peerconnection.dir/peerconnection.cpp.o -c /home/yhx/Documents/metaRTC/metapushSRS5/peerconnection.cpp",
-  "file": "/home/yhx/Documents/metaRTC/metapushSRS5/peerconnection.cpp"
+  "command": "/bin/g++-9   -I/home/yhx/Documents/metaRTC/demo/metapushSRS5/../../include -I/home/yhx/Documents/metaRTC/demo/metapushSRS5/../../libmetartc6/src -I/home/yhx/Documents/metaRTC/demo/metapushSRS5/../../demo/libmetaApp/src   -O2 -std=gnu++11 -O3 -DNDEBUG   -o CMakeFiles/peerconnection_zlm.dir/peerconnection_zlm.cpp.o -c /home/yhx/Documents/metaRTC/demo/metapushSRS5/peerconnection_zlm.cpp",
+  "file": "/home/yhx/Documents/metaRTC/demo/metapushSRS5/peerconnection_zlm.cpp"
 },
 
 {
   "directory": "/home/yhx/Documents/metaRTC/build",
-  "command": "/bin/g++-9   -I/home/yhx/Documents/metaRTC/metapushSRS5/../include -I/home/yhx/Documents/metaRTC/metapushSRS5/../libmetartc5/src   -O2 -std=gnu++11 -O3 -DNDEBUG   -o CMakeFiles/metartc_zlm.dir/metartc_zlm.cpp.o -c /home/yhx/Documents/metaRTC/metapushSRS5/metartc_zlm.cpp",
-  "file": "/home/yhx/Documents/metaRTC/metapushSRS5/metartc_zlm.cpp"
+  "command": "/bin/g++-9   -I/home/yhx/Documents/metaRTC/demo/metapushSRS5/../../include -I/home/yhx/Documents/metaRTC/demo/metapushSRS5/../../libmetartc6/src -I/home/yhx/Documents/metaRTC/demo/metapushSRS5/../../demo/libmetaApp/src   -O2 -std=gnu++11 -O3 -DNDEBUG   -o CMakeFiles/peerconnection_srs.dir/peerconnection_srs.cpp.o -c /home/yhx/Documents/metaRTC/demo/metapushSRS5/peerconnection_srs.cpp",
+  "file": "/home/yhx/Documents/metaRTC/demo/metapushSRS5/peerconnection_srs.cpp"
 },
 
 {
   "directory": "/home/yhx/Documents/metaRTC/build",
-  "command": "/bin/g++-9   -I/home/yhx/Documents/metaRTC/metapushSRS5/../include -I/home/yhx/Documents/metaRTC/metapushSRS5/../libmetartc5/src   -O2 -std=gnu++11 -O3 -DNDEBUG   -o CMakeFiles/metapushSRS5.dir/main.cpp.o -c /home/yhx/Documents/metaRTC/metapushSRS5/main.cpp",
-  "file": "/home/yhx/Documents/metaRTC/metapushSRS5/main.cpp"
+  "command": "/bin/g++-9   -I/home/yhx/Documents/metaRTC/demo/metapushSRS5/../../include -I/home/yhx/Documents/metaRTC/demo/metapushSRS5/../../libmetartc6/src -I/home/yhx/Documents/metaRTC/demo/metapushSRS5/../../demo/libmetaApp/src   -O2 -std=gnu++11 -O3 -DNDEBUG   -o CMakeFiles/metartc_zlm.dir/metartc_zlm.cpp.o -c /home/yhx/Documents/metaRTC/demo/metapushSRS5/metartc_zlm.cpp",
+  "file": "/home/yhx/Documents/metaRTC/demo/metapushSRS5/metartc_zlm.cpp"
+},
+
+{
+  "directory": "/home/yhx/Documents/metaRTC/build",
+  "command": "/bin/g++-9   -I/home/yhx/Documents/metaRTC/demo/metapushSRS5/../../include -I/home/yhx/Documents/metaRTC/demo/metapushSRS5/../../libmetartc6/src -I/home/yhx/Documents/metaRTC/demo/metapushSRS5/../../demo/libmetaApp/src   -O2 -std=gnu++11 -O3 -DNDEBUG   -o CMakeFiles/metartc_srs.dir/metartc_srs.cpp.o -c /home/yhx/Documents/metaRTC/demo/metapushSRS5/metartc_srs.cpp",
+  "file": "/home/yhx/Documents/metaRTC/demo/metapushSRS5/metartc_srs.cpp"
 }
 ]

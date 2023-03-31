@@ -24,7 +24,7 @@ typedef struct{
 #ifdef __cplusplus
 extern "C"{
 #endif
-void yang_create_websocket(YangWebsocket* web,YangWebsocketCallback* callback);
+void yang_create_websocket(YangIpFamilyType familyType,YangWebsocket* web,YangWebsocketCallback* callback);
 void yang_destroy_websocket(YangWebsocket* web);
 #ifdef __cplusplus
 }

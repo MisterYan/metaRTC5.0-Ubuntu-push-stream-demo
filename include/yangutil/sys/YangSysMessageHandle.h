@@ -1,10 +1,11 @@
-﻿//
+﻿
+//
 // Copyright (c) 2019-2022 yanggaofeng
 //
 #ifndef INCLUDE_YANGUTIL_SYS_YANGSYSMESSAGEHANDLE_H_
 #define INCLUDE_YANGUTIL_SYS_YANGSYSMESSAGEHANDLE_H_
 #include <yangutil/sys/YangSysMessageI.h>
-#include <yangutil/sys/YangThread.h>
+#include <yangutil/sys/YangThread2.h>
 #include <vector>
 
 
@@ -20,8 +21,8 @@ public:
 	void putMessage(YangSysMessageI *handle,int32_t pst, int32_t puid, int32_t handleState,void* user=NULL);
 
 	static YangSysMessageHandle* m_instance;
-	int32_t m_isStart;
-	int32_t m_loop;
+	yangbool m_isStart;
+	yangbool m_loop;
 	void stop();
 protected:
 	void run();
@@ -29,12 +30,12 @@ protected:
 	void stopLoop();
 
 private:
-
 	vector<YangSysMessage*> m_sysMessages;
-	pthread_mutex_t m_lock;
-	pthread_cond_t m_cond_mess;
+	yang_thread_mutex_t m_mutex;
+	yang_thread_mutex_t m_lock;
+	yang_thread_cond_t m_cond_mess;
 
-	int32_t m_waitState;
+	yangbool m_waitState;
 	YangSysMessageHandleI* m_receive;
 
 };

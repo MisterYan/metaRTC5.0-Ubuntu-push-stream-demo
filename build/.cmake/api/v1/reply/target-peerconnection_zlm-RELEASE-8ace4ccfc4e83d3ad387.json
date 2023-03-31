@@ -1,0 +1,225 @@
+{
+	"artifacts" : 
+	[
+		{
+			"path" : "peerconnection_zlm"
+		}
+	],
+	"backtrace" : 1,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_executable",
+			"include_directories"
+		],
+		"files" : 
+		[
+			"CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 84,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 15,
+				"parent" : 0
+			}
+		]
+	},
+	"compileGroups" : 
+	[
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : " -O2 -std=gnu++11 -O3 -DNDEBUG  "
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 2,
+					"path" : "/home/yhx/Documents/metaRTC/demo/metapushSRS5/../../include"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "/home/yhx/Documents/metaRTC/demo/metapushSRS5/../../libmetartc6/src"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "/home/yhx/Documents/metaRTC/demo/metapushSRS5/../../demo/libmetaApp/src"
+				}
+			],
+			"language" : "CXX",
+			"sourceIndexes" : 
+			[
+				0
+			]
+		}
+	],
+	"id" : "peerconnection_zlm::@6890427a1f51a3e7e1df",
+	"link" : 
+	{
+		"commandFragments" : 
+		[
+			{
+				"fragment" : "-O2 -std=gnu++11 -O3 -DNDEBUG",
+				"role" : "flags"
+			},
+			{
+				"fragment" : "-rdynamic",
+				"role" : "flags"
+			},
+			{
+				"fragment" : "/home/yhx/Documents/metaRTC/demo/metapushSRS5/libmetaApp.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "/home/yhx/Documents/metaRTC/demo/metapushSRS5/libmetartc6.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "/home/yhx/Documents/metaRTC/demo/metapushSRS5/libmetartccore6.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-lpthread",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-lssl",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-lcrypto",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-lopenh264",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-lyuv",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-ljpeg",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-lspeexdsp",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-lopus",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-lX11",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-ldl",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-lsrtp2",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-lmbedtls",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-lmbedx509",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-lmbedcrypto",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-lusrsctp",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-lasound",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-lavcodec",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-lavformat",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-lavutil",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-lswscale",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-lvorbis",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-lvorbisenc",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-ltheora",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-lgsm",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-lz",
+				"role" : "libraries"
+			}
+		],
+		"language" : "CXX"
+	},
+	"name" : "peerconnection_zlm",
+	"nameOnDisk" : "peerconnection_zlm",
+	"paths" : 
+	{
+		"build" : ".",
+		"source" : "."
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "Source Files",
+			"sourceIndexes" : 
+			[
+				0
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "peerconnection_zlm.cpp",
+			"sourceGroupIndex" : 0
+		}
+	],
+	"type" : "EXECUTABLE"
+}

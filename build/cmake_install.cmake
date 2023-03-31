@@ -1,4 +1,4 @@
-# Install script for directory: /home/yhx/Documents/metaRTC/metapushSRS5
+# Install script for directory: /home/yhx/Documents/metaRTC/demo/metapushSRS5
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

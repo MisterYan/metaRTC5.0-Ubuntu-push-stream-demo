@@ -3,11 +3,11 @@
 //
 #ifndef YangMultiVideoCapture_H
 #define YangMultiVideoCapture_H
-#include "yangutil/sys/YangThread.h"
-#include "yangutil/buffer/YangVideoBuffer.h"
-#include "yangutil/sys/YangIni.h"
-#include "yangutil/sys/YangLog.h"
-#include "YangVideoCapture.h"
+#include <yangutil/sys/YangThread2.h>
+#include <yangutil/buffer/YangVideoBuffer.h>
+#include <yangutil/sys/YangLog.h>
+#include <yangcapture/YangVideoCapture.h>
+
 class YangMultiVideoCapture: public YangVideoCapture {
 public:
 	YangMultiVideoCapture(){};

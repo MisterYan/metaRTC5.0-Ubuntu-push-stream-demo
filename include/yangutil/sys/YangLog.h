@@ -9,7 +9,7 @@
 #include <stdarg.h>
 
 
-#include "yangutil/YangErrorCode.h"
+
 #include <yangutil/yangtype.h>
 
 
@@ -27,6 +27,7 @@ void yang_clog(int32_t level, const char *fmt, ...);
 void yang_clogf(int32_t level, const char *fmt, ...);
 void yang_clogf2(int32_t level, const char *fmt, ...);
 void yang_setCLogFile(int32_t isSetLogFile);
+void yang_setCLogFile2(int32_t isSetLogFile, char *fullpathfile);
 void yang_closeCLogFile();
 void yang_setCLogLevel(int32_t plevel);
 #ifdef __cplusplus
@@ -62,6 +63,7 @@ void yang_setCLogLevel(int32_t plevel);
 #endif
 #define yang_setLogLevel(x) yang_setCLogLevel(x)
 #define yang_setLogFile(x) yang_setCLogFile(x)
+#define yang_setLogFile2(x,y) yang_setCLogFile2(x,y)
 
 #define yang_closeLogFile yang_closeCLogFile
 #endif

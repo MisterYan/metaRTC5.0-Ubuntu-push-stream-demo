@@ -5,7 +5,7 @@
 #ifndef INCLUDE_YANGAVUTIL_VIDEO_YANGCYUVUTIL_H_
 #define INCLUDE_YANGAVUTIL_VIDEO_YANGCYUVUTIL_H_
 
-#include "stdint.h"
+#include <yangutil/yangtype.h>
 
 void yang_plusNV12(uint8_t* src,uint8_t * dest,int32_t model,int32_t srcWidth,int32_t srcHeight,int32_t destWidth,int32_t destHeight);
 void yang_plusI420(uint8_t* src,uint8_t * dest,int32_t model,int32_t srcWidth,int32_t srcHeight,int32_t destWidth,int32_t destHeight);

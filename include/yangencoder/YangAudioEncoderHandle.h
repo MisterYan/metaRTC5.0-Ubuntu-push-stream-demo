@@ -3,15 +3,13 @@
 //
 #ifndef __YangAudioEncoderrHandle__
 #define __YangAudioEncoderrHandle__
-#include "stdint.h"
-
+#include <yangutil/sys/YangThread2.h>
+#include <yangutil/buffer/YangAudioEncoderBuffer.h>
+#include <yangutil/buffer/YangAudioPlayBuffer.h>
+#include <yangencoder/YangAudioEncoder.h>
 #include <vector>
 
-#include "yangutil/buffer/YangAudioEncoderBuffer.h"
-#include "yangutil/buffer/YangAudioPlayBuffer.h"
-#include "yangutil/sys/YangIni.h"
-#include "yangutil/sys/YangThread.h"
-#include "yangencoder/YangAudioEncoder.h"
+
 using namespace std;
 class YangAudioEncoderHandle:public YangThread,public YangEncoderCallback
 {

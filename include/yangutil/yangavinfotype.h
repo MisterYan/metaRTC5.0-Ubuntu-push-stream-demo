@@ -14,20 +14,20 @@ typedef struct YangAudioInfo {
 	int32_t bitrate;
 	int32_t channel;
 
-	int32_t enableMono;
-	int32_t enableAec;
+	yangbool enableMono;
+	yangbool enableAec;
 	int32_t echoPath;
 
-	int32_t enableAudioFec;
+	yangbool enableAudioFec;
 
 	int32_t aecBufferFrames;
 	int32_t audioCacheSize;
 	int32_t audioCacheNum;
 	int32_t audioPlayCacheNum;
 
-	int32_t enableAudioHeader;
+	yangbool enableAudioHeader;
 	int32_t audioEncoderType;
-	int audioDecoderType;
+	int32_t audioDecoderType;
 	int32_t audioPlayType;
 
 	int32_t aIndex;
@@ -48,9 +48,9 @@ typedef struct YangVideoInfo {
 	int32_t evideoCacheNum;
 	int32_t videoPlayCacheNum;
 
-	enum YangYuvType videoCaptureFormat;
-	enum YangYuvType videoEncoderFormat;
-	enum YangYuvType videoDecoderFormat;
+	YangColorSpace videoCaptureFormat;
+	YangColorSpace videoEncoderFormat;
+	YangColorSpace videoDecoderFormat;
 
 	int32_t videoEncoderType;
 	int32_t videoDecoderType;
@@ -66,46 +66,55 @@ typedef struct YangVideoEncInfo {
 	int32_t keyint_max;
 	int32_t enc_threads;
 	int32_t gop;
-	bool createMeta;
+	yangbool createMeta;
 }YangVideoEncInfo;
 
 typedef struct YangSysInfo {
-	int32_t enableMultCamera;
+	YangIpFamilyType familyType;
+	yangbool enableHttps;
+	yangbool enableLogFile;
+
 	int32_t mediaServer;
-	int32_t transType;
-	int32_t enableDataServer;
+
 	int32_t rtmpPort;
-	int32_t srtPort;
 	int32_t rtcPort;
 	int32_t rtcLocalPort;
 	int32_t httpPort;
-	int32_t dataPort;
-	int32_t enableLogFile;
+
+	int32_t transType;
 	int32_t logLevel;
-	int32_t cameraCount;
+
 	char localIp[32];
 	char rtcServerIP[32];
-	char cameraIndexs[50];
 	char rtmpServerIP[32];
-	char srtServerIP[32];
-
-	char httpServerIP[32];
-	char dataServerIP[32];
 }YangSysInfo;
 
 typedef struct YangRtcInfo {
+	yangbool enableHttpServerSdp;
+
 	int32_t sessionTimeout;
-	int32_t enableDatachannel;
+	yangbool enableDatachannel;
 	int32_t iceCandidateType;
-	int32_t iceUsingLocalIp;
+	yangbool iceUsingLocalIp;
 	int32_t iceServerPort;
-	int32_t enableAudioBuffer;
-	//int32_t videoQueueCount;
+	yangbool enableAudioBuffer;
+	int32_t rtcSocketProtocol;
+	int32_t turnSocketProtocol;
 	char iceServerIP[64];
 	char iceLocalIP[64];
 	char iceUserName[32];
 	char icePassword[64];
 }YangRtcInfo;
+
+typedef struct{
+	yangbool enableMqttTls;
+	int32_t mqttPort;
+	int32_t maxReconnectTimes;
+	int32_t reconnectIntervalTime;
+	char mqttServerIP[32];
+	char mqttUserName[32];
+	char mqttPassword[64];
+}YangMqttInfo;
 
 typedef struct YangAVInfo{
 	YangAudioInfo audio;
@@ -113,6 +122,9 @@ typedef struct YangAVInfo{
 	YangVideoEncInfo enc;
 	YangSysInfo sys;
 	YangRtcInfo rtc;
+#if	Yang_Enable_Mqtt
+	YangMqttInfo mqtt;
+#endif
 }YangAVInfo;
 
 typedef struct{

@@ -6,10 +6,12 @@
 #define YUVPLAYER_YUVPLAYER_H
 
 
-#include <pthread.h>
-#include <unistd.h>
+
+#include <yangutil/sys/YangThread.h>
 #include <yangutil/sys/YangYuvGl.h>
 #include "YangPlayerAndroid.h"
+#include <unistd.h>
+#include <string>
 class MetaPlayer {
 public:
     MetaPlayer(YangContext* pcontext);
@@ -19,17 +21,18 @@ public:
     void stopPlayer();
 
     void startPlayerTask();
+    YangContext* m_context;
     YangYuvGl* m_gl;
 private:
     void adjustVideoScaleResolution();//调整缩放后的视频宽高
     YangPlayerAndroid* m_player;
     bool m_isloop;
-    pthread_t m_pid_player;
-    int32_t m_video_width;
-    int32_t m_video_height;
+    yang_thread_t m_pid_player;
+    int32_t m_width;
+    int32_t m_height;
 
-    int32_t scale_video_width;//视频宽需要是8(2的3次幂)的倍数，否则视频错乱，绿条等等
-    int32_t scale_video_height;//视频高最好是2的倍数
+    int32_t m_render_width;
+    int32_t m_render_height;
 
     bool m_isSoftdecoder;
 };

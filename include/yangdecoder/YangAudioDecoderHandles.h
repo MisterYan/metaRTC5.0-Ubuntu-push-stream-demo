@@ -4,15 +4,13 @@
 #ifndef __YangAudioDecoderHandles__
 #define __YangAudioDecoderHandles__
 
-#include "stdint.h"
+#include <yangutil/sys/YangThread2.h>
+#include <yangutil/buffer/YangAudioEncoderBuffer.h>
+#include <yangutil/buffer/YangAudioPlayBuffer.h>
+#include <yangdecoder/YangAudioDecoder.h>
 #include <vector>
 #include <map>
-#include "yangutil/buffer/YangAudioEncoderBuffer.h"
-#include "yangutil/buffer/YangAudioPlayBuffer.h"
-#include "yangutil/sys/YangIni.h"
-#include "yangutil/sys/YangThread.h"
 
-#include "yangdecoder/YangAudioDecoder.h"
 using namespace std;
 class YangAudioDecoderHandles:public YangThread,public YangDecoderCallback
 {

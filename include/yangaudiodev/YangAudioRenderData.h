@@ -4,13 +4,13 @@
 
 #ifndef INCLUDE_YANGCAPTURE_YANGRENDERAUDIODATA_H_
 #define INCLUDE_YANGCAPTURE_YANGRENDERAUDIODATA_H_
-#include <stdint.h>
-#include <vector>
+
 #include <yangutil/buffer/YangAudioPlayBuffer.h>
 #include <yangavutil/audio/YangPreProcess.h>
 #include <yangavutil/audio/YangAudioUtil.h>
 
 #include <yangstream/YangSynBuffer.h>
+#include <vector>
 using namespace std;
 
 class YangAudioRenderData {

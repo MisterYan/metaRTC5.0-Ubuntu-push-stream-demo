@@ -1,13 +1,15 @@
-﻿//
+﻿
+//
 // Copyright (c) 2019-2022 yanggaofeng
 //
 #ifndef YANGPLAYER_INCLUDE_YANGAUDIOPLAYSDL1_H_
 #define YANGPLAYER_INCLUDE_YANGAUDIOPLAYSDL1_H_
 
-#include "yangutil/buffer/YangAudioPlayBuffer.h"
-#include "yangutil/sys/YangIni.h"
-#include "yangutil/sys/YangThread.h"
-#include "yangutil/sys/YangLoadLib.h"
+#include <yangutil/buffer/YangAudioPlayBuffer.h>
+#include <yangutil/sys/YangLoadLib.h>
+#include <yangutil/yangavinfotype.h>
+#include <yangutil/sys/YangThread2.h>
+
 #include <SDL2/SDL.h>
 
 class YangAudioPlayerSdl:public YangThread{
@@ -15,7 +17,7 @@ public:
 	YangAudioPlayerSdl(YangAudioInfo *pcontext);
 	~YangAudioPlayerSdl();
 	void init();
-        void*  (*yang_SDL_memset)(SDL_OUT_BYTECAP(len) void *dst, int32_t c, size_t len);
+        void*  (*yang_SDL_yang_memset)(SDL_OUT_BYTECAP(len) void *dst, int32_t c, size_t len);
         void  (*yang_SDL_MixAudio)(Uint8 * dst, const Uint8 * src, Uint32 len, int32_t volume);
 	void setAudioList(YangAudioPlayBuffer *pal);
 	int32_t m_isStart;

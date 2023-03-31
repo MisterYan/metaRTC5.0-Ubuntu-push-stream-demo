@@ -3,15 +3,14 @@
 //
 #ifndef __YangVideoEncoderHandle__
 #define __YangVideoEncoderHandle__
-#include "YangVideoEncoder.h"
-#include "stdint.h"
+#include <yangutil/sys/YangThread2.h>
+#include <yangutil/buffer/YangVideoEncoderBuffer.h>
+#include <yangutil/buffer/YangVideoBuffer.h>
+#include <yangencoder/YangVideoEncoder.h>
 
 #include <vector>
 
-#include "yangutil/buffer/YangVideoEncoderBuffer.h"
-#include "yangutil/buffer/YangVideoBuffer.h"
-#include "yangutil/sys/YangIni.h"
-#include "yangutil/sys/YangThread.h"
+
 
 using namespace std;
 class YangVideoEncoderHandle:public YangThread,public YangEncoderCallback

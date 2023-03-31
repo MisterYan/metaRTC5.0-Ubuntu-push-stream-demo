@@ -4,7 +4,7 @@
 
 #ifndef INCLUDE_YANGSTREAM_YANGSTREAM_H_
 #define INCLUDE_YANGSTREAM_YANGSTREAM_H_
-#include <stdint.h>
+#include <yangutil/yangtype.h>
 #include <yangstream/YangStreamCapture.h>
 #include <yangutil/yangavinfotype.h>
 #include "YangStreamType.h"

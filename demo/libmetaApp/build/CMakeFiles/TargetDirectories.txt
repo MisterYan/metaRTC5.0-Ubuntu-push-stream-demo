@@ -1,0 +1,3 @@
+/home/yhx/Documents/metaRTC/demo/libmetaApp/build/CMakeFiles/rebuild_cache.dir
+/home/yhx/Documents/metaRTC/demo/libmetaApp/build/CMakeFiles/edit_cache.dir
+/home/yhx/Documents/metaRTC/demo/libmetaApp/build/CMakeFiles/metaApp.dir

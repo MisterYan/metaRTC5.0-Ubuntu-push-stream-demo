@@ -4,7 +4,7 @@
 #ifndef YangBuffer_YANGRTCUTIL_H_
 #define YangBuffer_YANGRTCUTIL_H_
 
-#include <stdint.h>
+#include <yangutil/yangtype.h>
 
 #ifdef __cplusplus
 extern "C"{

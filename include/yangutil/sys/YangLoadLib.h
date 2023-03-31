@@ -4,7 +4,7 @@
 
 #ifndef YANGUTIL_SYS_YANGLOADLIB_H_
 #define YANGUTIL_SYS_YANGLOADLIB_H_
-#include <stdint.h>
+#include <yangutil/yangtype.h>
 #ifdef _WIN32
 #include <minwindef.h>
 #endif

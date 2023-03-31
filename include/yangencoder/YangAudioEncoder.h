@@ -3,12 +3,13 @@
 //
 #ifndef ___YangAudioEncoderPipe__
 #define ___YangAudioEncoderPipe__
+
+#include <yangutil/sys/YangThread2.h>
 #include <yangutil/yangavinfotype.h>
-#include "yangutil/buffer/YangAudioBuffer.h"
-#include "yangutil/buffer/YangAudioEncoderBuffer.h"
-#include "yangutil/sys/YangIni.h"
-#include "yangutil/sys/YangThread.h"
-#include "YangEncoder.h"
+#include <yangutil/buffer/YangAudioEncoderBuffer.h>
+#include <yangutil/buffer/YangAudioBuffer.h>
+#include <yangencoder/YangEncoder.h>
+
 
 class YangAudioEncoder
 {

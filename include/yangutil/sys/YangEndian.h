@@ -4,7 +4,7 @@
 
 #ifndef YANGUTIL_VIDEO_YANGEndian_H_
 #define YANGUTIL_VIDEO_YANGEndian_H_
-#include <stdint.h>
+#include <yangutil/yangtype.h>
 #ifdef __cplusplus
 extern "C"{
 #endif

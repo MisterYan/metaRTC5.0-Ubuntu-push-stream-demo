@@ -1,17 +1,16 @@
-//
+﻿//
 // Copyright (c) 2019-2022 yanggaofeng
 //
 #ifndef __YangVideoDecoderHandle__
 #define __YangVideoDecoderHandle__
-#include "stdint.h"
 
+#include <yangutil/buffer/YangVideoDecoderBuffer.h>
+#include <yangutil/buffer/YangVideoBuffer.h>
+#include <yangutil/sys/YangThread2.h>
+#include <yangdecoder/YangVideoDecoder.h>
+#include <yangutil/yangavinfotype.h>
 #include <vector>
 
-#include "yangutil/buffer/YangVideoDecoderBuffer.h"
-#include "yangutil/buffer/YangVideoBuffer.h"
-#include "yangutil/sys/YangIni.h"
-#include "yangutil/sys/YangThread.h"
-#include "YangVideoDecoder.h"
 using namespace std;
 class YangVideoDecoderHandle:public YangThread,public YangDecoderCallback
 {

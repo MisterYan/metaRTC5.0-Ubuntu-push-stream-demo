@@ -4,10 +4,10 @@
 #ifndef TRACE_YangTraceServer_H_
 #define TRACE_YangTraceServer_H_
 
+#include <yangutil/sys/YangThread2.h>
 #include <iostream>
 #include "YangCameraControl.h"
 #include "YangTraceHandle.h"
-#include "yangutil/sys/YangThread.h"
 #include "YangTraceIni.h"
 class YangTraceServer:public YangThread
 {

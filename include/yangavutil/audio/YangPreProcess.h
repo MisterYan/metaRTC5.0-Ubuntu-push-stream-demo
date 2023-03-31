@@ -4,7 +4,7 @@
 
 #ifndef YANGAUDIOPROC_YANGPREPROCESSSPEEX_H_
 #define YANGAUDIOPROC_YANGPREPROCESSSPEEX_H_
-#include <stdint.h>
+#include <yangutil/yangtype.h>
 
 typedef struct{
 	void* context;

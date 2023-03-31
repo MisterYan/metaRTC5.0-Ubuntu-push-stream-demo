@@ -1,21 +1,19 @@
-﻿//
+﻿
+//
 // Copyright (c) 2019-2022 yanggaofeng
 //
 #ifndef YangAudioPlay_H
 #define YangAudioPlay_H
-
+#include <yangutil/yangavinfotype.h>
+#include <yangutil/buffer/YangAudioPlayBuffer.h>
+#include <yangutil/sys/YangThread2.h>
 #include <yangaudiodev/YangAudioRenderData.h>
 #include <yangavutil/audio/YangRtcAec.h>
-#include <yangutil/yangavinfotype.h>
-#include "yangutil/buffer/YangAudioPlayBuffer.h"
-#include "yangutil/sys/YangIni.h"
-#include "yangutil/sys/YangThread.h"
-#define YangAudioBufferMaxNum 10
-
 #include<algorithm>
 #include <vector>
-
 using namespace std;
+
+#define YangAudioBufferMaxNum 10
 
 class YangAudioPlay:public YangThread
 {

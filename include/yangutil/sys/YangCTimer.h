@@ -1,29 +1,38 @@
 ﻿//
-// Copyright (c) 2019-2022 yanggaofeng
+// Copyright (c) 2019-2022 yanggaofeng blueskiner
 //
 #ifndef SRC_YANGUTIL_SRC_YANGCTIMER_H_
 #define SRC_YANGUTIL_SRC_YANGCTIMER_H_
 #include <yangutil/yangtype.h>
-#include <pthread.h>
 #include <stdint.h>
-#ifdef _WIN32
-#define Yang_Enable_Timer_Phtread 1
-#else
-#define Yang_Enable_Timer_Phtread 0
+#include <yangutil/sys/YangThread.h>
+
+#if __APPLE__
+	#import <dispatch/source.h>
 #endif
 
 typedef struct YangCTimer{
 	int32_t taskId;
-	int32_t timerfd;
-	int32_t efd;
+
 	int32_t isStart;
 	int32_t isloop;
 	int32_t waitState;
 	int32_t waitTime;
-	pthread_t threadId;
+	yang_thread_t threadId;
 #if Yang_Enable_Timer_Phtread
-    pthread_mutex_t t_lock;
-    pthread_cond_t t_cond_mess;
+	yang_thread_mutex_t t_lock;
+	yang_thread_cond_t t_cond_mess;
+#else
+    #ifdef _WIN32   
+        HANDLE	hTimerQueue;
+        HANDLE	hTimerQueueTimer;
+        HANDLE  winEvent;
+	#elif __APPLE__
+		dispatch_source_t _timer;
+	#else
+        int32_t timerfd;
+        int32_t efd;
+    #endif
 #endif
 	void (*doTask)(int32_t taskId,void* user);
 	void* user;

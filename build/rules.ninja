@@ -22,7 +22,7 @@ rule CUSTOM_COMMAND
 #############################################
 # Rule for compiling CXX files.
 
-rule CXX_COMPILER__peerconnection
+rule CXX_COMPILER__peerconnection_zlm
   depfile = $DEP_FILE
   deps = gcc
   command = /bin/g++-9  $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
@@ -32,7 +32,26 @@ rule CXX_COMPILER__peerconnection
 #############################################
 # Rule for linking CXX executable.
 
-rule CXX_EXECUTABLE_LINKER__peerconnection
+rule CXX_EXECUTABLE_LINKER__peerconnection_zlm
+  command = $PRE_LINK && /bin/g++-9  $FLAGS  $LINK_FLAGS $in  -o $TARGET_FILE $LINK_PATH $LINK_LIBRARIES && $POST_BUILD
+  description = Linking CXX executable $TARGET_FILE
+  restat = $RESTAT
+
+
+#############################################
+# Rule for compiling CXX files.
+
+rule CXX_COMPILER__peerconnection_srs
+  depfile = $DEP_FILE
+  deps = gcc
+  command = /bin/g++-9  $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  description = Building CXX object $out
+
+
+#############################################
+# Rule for linking CXX executable.
+
+rule CXX_EXECUTABLE_LINKER__peerconnection_srs
   command = $PRE_LINK && /bin/g++-9  $FLAGS  $LINK_FLAGS $in  -o $TARGET_FILE $LINK_PATH $LINK_LIBRARIES && $POST_BUILD
   description = Linking CXX executable $TARGET_FILE
   restat = $RESTAT
@@ -60,7 +79,7 @@ rule CXX_EXECUTABLE_LINKER__metartc_zlm
 #############################################
 # Rule for compiling CXX files.
 
-rule CXX_COMPILER__metapushSRS5
+rule CXX_COMPILER__metartc_srs
   depfile = $DEP_FILE
   deps = gcc
   command = /bin/g++-9  $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
@@ -70,7 +89,7 @@ rule CXX_COMPILER__metapushSRS5
 #############################################
 # Rule for linking CXX executable.
 
-rule CXX_EXECUTABLE_LINKER__metapushSRS5
+rule CXX_EXECUTABLE_LINKER__metartc_srs
   command = $PRE_LINK && /bin/g++-9  $FLAGS  $LINK_FLAGS $in  -o $TARGET_FILE $LINK_PATH $LINK_LIBRARIES && $POST_BUILD
   description = Linking CXX executable $TARGET_FILE
   restat = $RESTAT
@@ -80,7 +99,7 @@ rule CXX_EXECUTABLE_LINKER__metapushSRS5
 # Rule for re-running cmake.
 
 rule RERUN_CMAKE
-  command = /usr/bin/cmake -S/home/yhx/Documents/metaRTC/metapushSRS5 -B/home/yhx/Documents/metaRTC/build
+  command = /usr/bin/cmake -S/home/yhx/Documents/metaRTC/demo/metapushSRS5 -B/home/yhx/Documents/metaRTC/build
   description = Re-running CMake...
   generator = 1
 

@@ -1,11 +1,12 @@
-﻿//
+﻿
+//
 // Copyright (c) 2019-2022 yanggaofeng
 //
 #ifndef SRC_YANGMEETING_INCLUDE_YangRtcPublish_H_
 #define SRC_YANGMEETING_INCLUDE_YangRtcPublish_H_
 #include <yangrtc/YangPeerConnection2.h>
 #include <string>
-#include <yangutil/sys/YangThread.h>
+#include <yangutil/sys/YangThread2.h>
 #include <yangutil/sys/YangSysMessageI.h>
 #include <yangutil/buffer/YangAudioEncoderBuffer.h>
 #include <yangutil/buffer/YangVideoEncoderBuffer.h>

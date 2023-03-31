@@ -1,18 +1,16 @@
-//
+﻿//
 // Copyright (c) 2019-2022 yanggaofeng
 //
 #ifndef __YangVideoDecoderHandles__
 #define __YangVideoDecoderHandles__
-#include "stdint.h"
-
+#include <yangutil/sys/YangThread2.h>
+#include <yangutil/buffer/YangVideoDecoderBuffer.h>
+#include <yangutil/buffer/YangVideoBuffer.h>
+#include <yangdecoder/YangVideoDecoder.h>
+#include <yangutil/yangavinfotype.h>
 #include <vector>
 
 
-#include "yangutil/buffer/YangVideoDecoderBuffer.h"
-#include "yangutil/buffer/YangVideoBuffer.h"
-#include "yangutil/sys/YangIni.h"
-#include "yangutil/sys/YangThread.h"
-#include "YangVideoDecoder.h"
 using namespace std;
 class YangVideoDecoderHandles:public YangThread,public YangDecoderCallback
 {
@@ -59,7 +57,7 @@ private:
 	int32_t m_isConvert;
 
 	YangContext *m_context;
-	pthread_mutex_t m_mutex;
+	yang_thread_mutex_t m_mutex;
 	void removeStream();
 	void decode(int32_t isIframe,uint8_t*src,int32_t  p_buflen,uint8_t *dest,int32_t *p_destLen);
 

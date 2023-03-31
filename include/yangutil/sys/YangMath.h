@@ -4,7 +4,7 @@
 
 #ifndef INCLUDE_YANGUTIL_SYS_YANGMATH_H_
 #define INCLUDE_YANGUTIL_SYS_YANGMATH_H_
-#include <stdint.h>
+#include <yangutil/yangtype.h>
 static inline int16_t yang_rtp_seq_distance(const uint16_t prev_value, const uint16_t value)
 {
     return (int16_t)(value - prev_value);

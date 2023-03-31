@@ -9,7 +9,6 @@
 #include <yangstream/YangStreamType.h>
 #include <yangutil/yangavinfotype.h>
 #include <yangutil/sys/YangSysMessageI.h>
-#include <stdint.h>
 #include <string>
 
 class YangPlayerAndroid :public YangSysMessageI{

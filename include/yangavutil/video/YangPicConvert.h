@@ -4,7 +4,7 @@
 #ifndef _YangConvert_H__
 #define _YangConvert_H__
 
-#include "stdint.h"
+#include <yangutil/yangtype.h>
 
 //#include "YangResize.h"
 #define u8_t uint8_t

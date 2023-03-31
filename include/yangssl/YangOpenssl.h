@@ -7,8 +7,8 @@
 
 
 #include <yangutil/yangtype.h>
-#include <stdint.h>
-#include <string.h>
+
+
 #if Yang_Enable_Openssl
 #if Yang_Enable_Dtls
 
@@ -28,7 +28,7 @@ extern "C"{
 #endif
 int32_t hmac_encode(const char* algo, const char* key, const int32_t key_length,
        const char* input, const int32_t input_length, char* output, uint32_t* output_length);
-
+int32_t yang_ssl_md5(const uint8_t* keystr,size_t keystrLen,uint8_t* key);
 int32_t yang_create_certificate(YangCertificate* cer);
 void yang_destroy_certificate(YangCertificate* cer);
 void g_yang_create_srtp();

@@ -6,11 +6,14 @@
 
 
 #include <yangp2p/YangP2pCommon.h>
-#include "yangutil/buffer/YangAudioEncoderBuffer.h"
-#include "yangutil/buffer/YangAudioBuffer.h"
-#include "yangutil/sys/YangIni.h"
-#include "yangutil/buffer/YangVideoEncoderBuffer.h"
-#include "yangutil/buffer/YangVideoBuffer.h"
+#include <yangutil/buffer/YangAudioEncoderBuffer.h>
+#include <yangutil/buffer/YangVideoEncoderBuffer.h>
+#include <yangutil/buffer/YangAudioBuffer.h>
+#include <yangutil/buffer/YangVideoBuffer.h>
+#include <yangutil/yangavinfotype.h>
+
+
+
 class YangP2pPublish: public YangSendRequestCallback {
 public:
 	YangP2pPublish(){};

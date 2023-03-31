@@ -31,9 +31,9 @@ typedef struct{
 	uint32_t uidSeq;
 	int32_t clientUid;
 	uint32_t playCount;
-	pthread_t threadId;
+	yang_thread_t threadId;
 
-	pthread_mutex_t mutex;
+	yang_thread_mutex_t mutex;
 	YangH264NaluData nalu;
 
 	YangVideoEncoderBuffer2 *in_videoBuffer;

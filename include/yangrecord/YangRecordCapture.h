@@ -4,17 +4,17 @@
 
 #ifndef YANGAPP_YangReczbCapture_H_
 #define YANGAPP_YangReczbCapture_H_
+#include <yangutil/buffer/YangAudioBuffer.h>
+#include <yangutil/buffer/YangVideoBuffer.h>
+#include <yangutil/buffer/YangAudioPlayBuffer.h>
+#include <yangutil/sys/YangThread2.h>
 #include <yangavutil/audio/YangRtcAec.h>
 #include <yangavutil/audio/YangPreProcess.h>
 #include <yangaudiodev/YangAudioCapture.h>
 #include <yangcapture/YangCaptureFactory.h>
 #include <yangcapture/YangMultiVideoCapture.h>
 #include <vector>
-#include "yangutil/buffer/YangAudioBuffer.h"
-#include "yangutil/buffer/YangVideoBuffer.h"
-#include "yangutil/sys/YangIni.h"
-#include "yangutil/buffer/YangAudioPlayBuffer.h"
-#include "yangutil/sys/YangThread.h"
+
 using namespace std;
 
 class YangRecordCapture:public YangThread {

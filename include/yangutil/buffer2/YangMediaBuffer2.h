@@ -4,7 +4,7 @@
 
 #ifndef YANGUTIL_BUFFER_YANGBUFFER2_H_
 #define YANGUTIL_BUFFER_YANGBUFFER2_H_
-#include <pthread.h>
+#include <yangutil/sys/YangThread.h>
 #include <yangutil/yangtype.h>
 #include <yangutil/yangavtype.h>
 #define yang_reindex2(p)  if(p!=NULL) p->resetIndex(&p->mediaBuffer);
@@ -18,7 +18,7 @@ typedef struct{
 	uint32_t size;
 	uint32_t nextIndex;
 	int32_t ret;
-	pthread_mutex_t mlock;
+	yang_thread_mutex_t mlock;
 	YangFrame** frames;
 	uint8_t* bufferManager;
 }YangMediaBufferSession2;

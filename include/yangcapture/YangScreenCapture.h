@@ -6,7 +6,7 @@
 #define INCLUDE_YANGCAPTURE_YANGSCREENCAPTURE_H_
 
 #include "yangutil/buffer/YangVideoBuffer.h"
-#include "yangutil/sys/YangThread.h"
+#include <yangutil/sys/YangThread2.h>
 #include "YangScreenCaptureHandleI.h"
 
 

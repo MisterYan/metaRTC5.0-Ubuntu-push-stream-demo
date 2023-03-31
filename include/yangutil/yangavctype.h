@@ -5,24 +5,25 @@
 #ifndef INCLUDE_YANGUTIL_YANGAVCTYPE_H_
 #define INCLUDE_YANGUTIL_YANGAVCTYPE_H_
 
-#include <stdint.h>
+#include <yangutil/yangtype.h>
 #define YANG_Frametype_Spspps 9
 #define YANG_Frametype_I 1
 #define YANG_Frametype_P 0
+
+#define Yang_MJPEG_Header 0x37
 
 typedef enum  {
 	Yang_Stream_Play, Yang_Stream_Publish, Yang_Stream_Both
 }YangStreamOptType;
 
 typedef enum {
-    YANG_CONNECTION_STATE_NONE = 0,
-    YANG_CONNECTION_STATE_NEW,
-    YANG_CONNECTION_STATE_CONNECTING,
-    YANG_CONNECTION_STATE_CONNECTED,
-    YANG_CONNECTION_STATE_DISCONNECTED,
-    YANG_CONNECTION_STATE_FAILED,
-    YANG_CONNECTION_STATE_CLOSED
-} YANG_RTC_CONNECTION_STATE;
+    Yang_Conn_State_New,
+    Yang_Conn_State_Connecting,
+    Yang_Conn_State_Connected,
+    Yang_Conn_State_Disconnected,
+    Yang_Conn_State_Failed,
+    Yang_Conn_State_Closed
+}YangRtcConnectionState;
 
 typedef enum YangAudioCodec{
 	Yang_AED_AAC,
@@ -36,8 +37,9 @@ typedef enum YangVideoCodec{
 	Yang_VED_264,
 	Yang_VED_265,
 	Yang_VED_AV1,
-	Yang_VED_VP9
-
+	Yang_VED_VP8,
+	Yang_VED_VP9,
+	Yang_VED_MJPEG
 }YangVideoCodec;
 
 typedef enum YangRequestType {
@@ -57,6 +59,12 @@ typedef enum{
 	YangIceStun,
 	YangIceTurn
 }YangIceCandidateType;
+
+typedef enum {
+	YangIceNew,
+    YangIceSuccess,
+    YangIceFail
+}YangIceCandidateState;
 
 typedef struct{
 	int32_t mediaType;
@@ -89,6 +97,7 @@ typedef struct{
 
 
 typedef struct{
+	YangIpFamilyType familyType;
 	int32_t serverPort;
 	uint32_t stunIp;
 	int32_t stunPort;
@@ -113,8 +122,8 @@ typedef struct {
 
 typedef struct{
 	void* context;
-	int32_t (*onIceCandidate)(void* context,YangIceServer* iceServer);
-	void (*onIceConnectionStateChange)(void* context, YANG_RTC_CONNECTION_STATE connectionState);
+	void (*onIceStateChange)(void* context,int32_t uid,YangIceCandidateType iceCandidateType,YangIceCandidateState iceState);
+	void (*onConnectionStateChange)(void* context, int32_t uid,YangRtcConnectionState connectionState);
 }YangIceCallback;
 
 typedef struct{
@@ -139,7 +148,7 @@ typedef struct  {
 	char url[160];
 	char remoteIp[64];
 	char app[32];
-	char stream[128];
+	char stream[Yang_StreamName_Lenght];
 }YangStreamConfig;
 
 #endif /* INCLUDE_YANGUTIL_YANGAVCTYPE_H_ */

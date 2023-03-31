@@ -6,11 +6,11 @@
 
 #include <yangavutil/audio/YangRtcAec.h>
 #include <yangavutil/audio/YangPreProcess.h>
+#include <yangutil/sys/YangThread2.h>
 #include <yangutil/yangavinfotype.h>
 #include "yangutil/buffer/YangAudioPlayBuffer.h"
 #include "yangutil/buffer/YangAudioBuffer.h"
 #include <vector>
-#include "yangutil/sys/YangThread.h"
 #include "yangutil/sys/YangLog.h"
 using namespace std;
 
@@ -22,7 +22,7 @@ class YangAudioCapture:public YangThread
     public:
 
         int32_t aIndex;
-        int32_t m_isStart;
+        yangbool m_isStart;
         virtual int32_t init()=0;
         virtual void setCatureStart()=0;
         virtual void setCatureStop()=0;

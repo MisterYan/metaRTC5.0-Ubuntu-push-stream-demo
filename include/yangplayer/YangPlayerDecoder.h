@@ -6,7 +6,6 @@
 #define YANGAPP_YANGDECODERAPP_H_
 #include <yangdecoder/YangAudioDecoderHandle.h>
 #include <yangdecoder/YangVideoDecoderHandle.h>
-#include <yangutil/sys/YangIni.h>
 #include <vector>
 
 using namespace std;

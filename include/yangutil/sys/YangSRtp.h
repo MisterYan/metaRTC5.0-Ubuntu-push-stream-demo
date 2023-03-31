@@ -1,18 +1,19 @@
-﻿//
+﻿
+//
 // Copyright (c) 2019-2022 yanggaofeng
 //
 #ifndef INCLUDE_YANGUTIL_SYS_YANGSRTP_H_
 #define INCLUDE_YANGUTIL_SYS_YANGSRTP_H_
 #include <yangutil/yangtype.h>
 #include <stdint.h>
-#include <pthread.h>
+#include <yangutil/sys/YangThread.h>
 #if Yang_Enable_Dtls
 #include <srtp2/srtp.h>
 typedef struct{
 	 srtp_t recvCtx;
 	 srtp_t sendCtx;
-	 pthread_mutex_t rtpLock;
-	 pthread_mutex_t rtcpLock;
+	 yang_thread_mutex_t rtpLock;
+	 yang_thread_mutex_t rtcpLock;
 }YangSRtp;
 #ifdef __cplusplus
 extern "C"{

@@ -3,12 +3,14 @@
 //
 #ifndef YANGPLAYER_INCLUDE_YANGAVSYN_H_
 #define YANGPLAYER_INCLUDE_YANGAVSYN_H_
-#include <yangutil/sys/YangTime.h>
 
-#include <yangutil/yangavtype.h>
 #include <yangutil/buffer/YangAudioPlayBuffer.h>
-#include <yangavutil/audio/YangAudioMix.h>
 #include <yangutil/buffer/YangVideoBuffer.h>
+#include <yangutil/sys/YangTime.h>
+#include <yangutil/yangavtype.h>
+
+#include <yangavutil/audio/YangAudioMix.h>
+
 
 
 enum YangSynType{

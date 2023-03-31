@@ -3,7 +3,7 @@
 //
 #ifndef YANGWEBRTC_YANGRTCUTIL_H_
 #define YANGWEBRTC_YANGRTCUTIL_H_
-#include <stdint.h>
+#include <yangutil/yangtype.h>
 #ifdef __cplusplus
 extern "C"{
 #endif

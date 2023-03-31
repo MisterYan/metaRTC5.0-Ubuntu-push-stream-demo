@@ -3,7 +3,7 @@
 //
 #ifndef YANGCAPTURE_WIN_API_YANGCAPTUREAUDIODATA_H_
 #define YANGCAPTURE_WIN_API_YANGCAPTUREAUDIODATA_H_
-#include <stdint.h>
+
 #include <yangaudiodev/YangCaptureCallback.h>
 #include <yangutil/yangavtype.h>
 #include <yangavutil/audio/YangAudioUtil.h>

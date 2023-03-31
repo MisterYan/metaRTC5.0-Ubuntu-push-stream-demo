@@ -3,11 +3,12 @@
 //
 #ifndef INCLUDE_YANGUTIL_SYS_YANGSTRING_H_
 #define INCLUDE_YANGUTIL_SYS_YANGSTRING_H_
-#include <vector>
-#include <string.h>
-#include <string>
-#include <yangutil/sys/YangMath.h>
+
 #include <yangutil/buffer/YangBuffer.h>
+#include <yangutil/sys/YangMath.h>
+#include <yangutil/yangtype.h>
+#include <string>
+#include <vector>
 using namespace std;
 
 vector<string> yang_split(string s, char ch);

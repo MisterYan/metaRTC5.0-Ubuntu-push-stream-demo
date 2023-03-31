@@ -245,7 +245,7 @@ FFMPEG_z_LIBRARY:FILEPATH=/usr/lib/x86_64-linux-gnu/libz.so
 metapushSRS5_BINARY_DIR:STATIC=/home/yhx/Documents/metaRTC/build
 
 //Value Computed by CMake
-metapushSRS5_SOURCE_DIR:STATIC=/home/yhx/Documents/metaRTC/metapushSRS5
+metapushSRS5_SOURCE_DIR:STATIC=/home/yhx/Documents/metaRTC/demo/metapushSRS5
 
 
 ########################
@@ -330,7 +330,7 @@ CMAKE_GENERATOR_PLATFORM:INTERNAL=
 CMAKE_GENERATOR_TOOLSET:INTERNAL=
 //Source directory with the top level CMakeLists.txt file for this
 // project
-CMAKE_HOME_DIRECTORY:INTERNAL=/home/yhx/Documents/metaRTC/metapushSRS5
+CMAKE_HOME_DIRECTORY:INTERNAL=/home/yhx/Documents/metaRTC/demo/metapushSRS5
 //Install .so files without execute permission.
 CMAKE_INSTALL_SO_NO_EXE:INTERNAL=1
 //ADVANCED property for variable: CMAKE_LINKER

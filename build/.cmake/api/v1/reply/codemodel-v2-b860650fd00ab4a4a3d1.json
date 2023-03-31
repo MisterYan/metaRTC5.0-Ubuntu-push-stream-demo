@@ -1,0 +1,86 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "2.8"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3
+					]
+				}
+			],
+			"name" : "RELEASE",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "metapushSRS5",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "metartc_srs::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-metartc_srs-RELEASE-66f149b1e11dae46e039.json",
+					"name" : "metartc_srs",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "metartc_zlm::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-metartc_zlm-RELEASE-8a0a1faef38aada60712.json",
+					"name" : "metartc_zlm",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "peerconnection_srs::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-peerconnection_srs-RELEASE-c470264d4b5c91f3ea45.json",
+					"name" : "peerconnection_srs",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "peerconnection_zlm::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-peerconnection_zlm-RELEASE-8ace4ccfc4e83d3ad387.json",
+					"name" : "peerconnection_zlm",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/yhx/Documents/metaRTC/build",
+		"source" : "/home/yhx/Documents/metaRTC/demo/metapushSRS5"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 0
+	}
+}

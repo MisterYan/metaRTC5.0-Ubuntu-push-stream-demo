@@ -6,12 +6,11 @@
 #define INCLUDE_YANGIPC_YANGIPCENCODER_H_
 
 #include <yangutil/buffer2/YangVideoEncoderBuffer2.h>
-#include <yangutil/sys/YangIni.h>
-#include <pthread.h>
+#include <yangutil/sys/YangThread.h>
 typedef struct{
 	int32_t isConvert;
 	int32_t isStart;
-	pthread_t threadId;
+	yang_thread_t threadId;
 	YangVideoEncoderBuffer2 *out_videoBuffer;
 }YangEncoderSession;
 typedef struct{

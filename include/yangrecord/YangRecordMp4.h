@@ -3,7 +3,7 @@
 //
 #ifndef _YangRecordMp4_H
 #define _YangRecordMp4_H
-#include "yangutil/sys/YangThread.h"
+#include <yangutil/sys/YangThread2.h>
 #include "yangutil/sys/YangTime.h"
 #include "yangutil/buffer/YangVideoEncoderBuffer.h"
 #include "yangutil/buffer/YangAudioEncoderBuffer.h"

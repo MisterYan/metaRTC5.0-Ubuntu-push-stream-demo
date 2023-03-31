@@ -4,7 +4,8 @@
 #ifndef INCLUDE_YANGUTIL_BUFFER_YANGCBUFFER_H_
 #define INCLUDE_YANGUTIL_BUFFER_YANGCBUFFER_H_
 
-#include <stdint.h>
+#include <yangutil/yangtype.h>
+
 typedef struct{
     // current position at bytes.
     char* head;

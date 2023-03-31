@@ -4,24 +4,22 @@
 
 #ifndef YangYuvConvert_H_
 #define YangYuvConvert_H_
+#include <yangutil/sys/YangLoadLib.h>
 
-#include "stdint.h"
-#include "yangutil/sys/YangLoadLib.h"
+#if Yang_Enable_YuvSo
+	#include <libyuv.h>
+#else
+extern "C"{
+	#include <libyuv.h>
+}
+#endif
+using namespace libyuv;
 
 #ifdef __ANDROID__
 #define Yang_Enable_YuvSo 0
 #else
 #define Yang_Enable_YuvSo 0
 #endif
-#if Yang_Enable_YuvSo
-#include "libyuv.h"
-#else
-extern "C"{
-#include "libyuv.h"
-}
-#endif
-using namespace libyuv;
-
 
 class YangYuvConvert {
 public:

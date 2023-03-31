@@ -1,10 +1,11 @@
-﻿//
+﻿
+//
 // Copyright (c) 2019-2022 yanggaofeng
 //
 #ifndef INCLUDE_YANGUTIL_YANGAVTYPE_H_
 #define INCLUDE_YANGUTIL_YANGAVTYPE_H_
-#include <stdio.h>
-#include <stdint.h>
+
+#include <yangutil/yangtype.h>
 
     // 8 = audio
 #define    YangFrameTypeAudio 8
@@ -14,8 +15,11 @@
 #define kNalTypeMask       0x1F
 
 #define YangAudioPayloadType 111
-#define YangH264PayloadType 125
+#define YangAV1PayloadType 123
+#define YangH264PayloadType 106
 #define YangH265PayloadType 126
+#define YangMjpegPayloadType 26
+
 
 #define Yang_TWCC_ID 3
 
@@ -43,7 +47,7 @@ typedef enum YangYuvType{
     YangBgra,
 	YangP010,
     YangP016
-}YangYuvType;
+}YangColorSpace;
 
 typedef enum YangRatate{
 	Yang_Rotate0 = 0,      // No rotation.
@@ -156,6 +160,7 @@ enum YangAvcProfile
     YangAvcProfileHigh444Predictive = 244,
     YangAvcProfileHigh444Intra = 2192,
 };
+
 struct YangRect{
     short x;
     short y;
@@ -196,34 +201,29 @@ enum YangVideoHwType{
 	YangV_Hw_Android
 };
 
-
-
-//void yang_frame_init(YangFrame* frame);
-
 struct YangMessage{
 	int32_t mediaType;
 	int32_t nb;
 	int64_t timestamp;
-
 	char* payload;
-
-
 };
+
 typedef struct {
 	int32_t nb;
 	char* bytes;
 }YangSample;
- YangSample* yang_sample_copy(YangSample* src);
+
+YangSample* yang_sample_copy(YangSample* src);
 
 
 
 #include <yangutil/yangavctype.h>
 #ifdef __cplusplus
 extern "C"{
-#include <yangutil/yangavctype_H.h>
+#include <yangutil/yangframebuffer.h>
 }
 #else
-#include <yangutil/yangavctype_H.h>
+#include <yangutil/yangframebuffer.h>
 #endif
 #ifdef __cplusplus
 class YangBufferManager{
