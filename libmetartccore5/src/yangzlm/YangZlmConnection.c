@@ -103,7 +103,7 @@ int32_t yang_zlm_doHandleSignal(YangRtcSession* session,ZlmSdpResponseType* zlm,
 	memset(apiurl,0,sizeof(apiurl));
 
 	sprintf(apiurl, "index/api/webrtc?app=%s&stream=%s&type=%s", session->context.streamConfig->app,session->context.streamConfig->stream,role==Yang_Stream_Play?"play":"push");
-	err=yang_zlm_query(session,zlm,role==Yang_Stream_Play?1:0,(char*)session->context.streamConfig->remoteIp,80,apiurl, sdp);
+	err=yang_zlm_query(session,zlm,role==Yang_Stream_Play?1:0,(char*)session->context.streamConfig->remoteIp,session->context.streamConfig->remotePort,apiurl, sdp);
 
 	return err;
 }
